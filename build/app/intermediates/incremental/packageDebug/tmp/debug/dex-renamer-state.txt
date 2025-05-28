@@ -1,13 +1,16 @@
-#Wed May 28 15:28:16 IST 2025
-path.3=14/classes.dex
-path.2=1/classes.dex
-path.1=0/classes.dex
+#Wed May 28 15:48:21 IST 2025
+path.4=14/classes.dex
+path.3=1/classes.dex
+path.2=0/classes.dex
+path.1=11/classes.dex
 path.0=classes.dex
-base.3=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.2=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.1=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.4=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.3=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.2=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeLibDexDebug/11/classes.dex
 base.0=/home/dell/Flutter/flutter_firebase/task_manager_firebase/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+renamed.4=classes5.dex
