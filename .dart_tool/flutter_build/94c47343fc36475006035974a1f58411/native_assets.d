@@ -1,0 +1,1 @@
+ /home/dell/Flutter/flutter_firebase/task_manager_firebase/.dart_tool/flutter_build/94c47343fc36475006035974a1f58411/native_assets.yaml: 
