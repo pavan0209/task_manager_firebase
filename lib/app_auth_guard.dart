@@ -3,7 +3,7 @@ import 'package:auto_route/auto_route.dart';
 class LoginAuthGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
-    if (false) {
+    if (true) {
       resolver.next(true);
     } else {
       router.pushNamed('/home');
@@ -15,7 +15,7 @@ class LoginAuthGuard extends AutoRouteGuard {
 class AuthGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
-    if (false) {
+    if (true) {
       router.pushNamed('/');
       resolver.next(false);
     } else {
