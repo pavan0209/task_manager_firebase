@@ -33,7 +33,7 @@ class AppTextField extends StatelessWidget {
     this.autofocus,
     this.keyboardType,
     this.obscureText,
-    this.obscuringCharacter = '',
+    this.obscuringCharacter = '•',
     this.label,
     this.labelText,
     this.labelStyle,
@@ -71,7 +71,7 @@ class AppTextField extends StatelessWidget {
         hintStyle: hintStyle,
         filled: filled,
         fillColor: fillColor,
-        contentPadding: const EdgeInsets.only(left: AppPadding.largePadding, top: AppPadding.defaultPadding),
+        contentPadding: const EdgeInsets.only(left: AppPadding.defaultPadding, top: AppPadding.defaultPadding),
         border: border ??
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(AppRadius.standardRadius),

@@ -66,6 +66,7 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
                       fillColor: AppColors.white,
                       hintText: 'email',
                       hintStyle: AppStyles.greyBodySmallTextStyle(),
+                      prefixIcon: Icon(Icons.email_outlined, color: AppColors.blue),
                     ),
                     const SizedBox(height: AppSpacing.largeSpacing),
                     AppTextField(
@@ -73,12 +74,14 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
                       filled: true,
                       fillColor: AppColors.white,
                       obscureText: isObscure,
+                      obscuringCharacter: '*',
                       suffixIcon: GestureDetector(
                         onTap: () {
                           setState(() {
                             isObscure = !isObscure;
                           });
                         },
+                        
                         child: Icon(
                           isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,
                           color: AppColors.grey,
@@ -86,6 +89,8 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
                       ),
                       hintText: 'password',
                       hintStyle: AppStyles.greyBodySmallTextStyle(),
+                      prefixIcon: Icon(Icons.lock_outline, color: AppColors.blue),
+
                     ),
                     const SizedBox(height: AppSpacing.largeSpacing),
                     Row(
