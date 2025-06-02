@@ -27,9 +27,9 @@ class AppStyles {
   static formLabelStyle() {
     return TextStyle(
       fontFamily: AppFontFamily.poppins,
-      fontSize: AppFontSize.bodyLarge,
+      fontSize: AppFontSize.bodyMedium,
       fontWeight: FontWeight.w600,
-      color: AppColors.black,
+      color: AppColors.black.withOpacity(0.7),
     );
   }
 
@@ -48,6 +48,22 @@ class AppStyles {
       fontFamily: AppFontFamily.poppins,
       fontWeight: FontWeight.w600,
       fontSize: AppFontSize.bodySmall,
+    );
+  }
+
+  static greenBodyMediumTextStyle() {
+    return TextStyle(
+      color: AppColors.green,
+      fontFamily: AppFontFamily.poppins,
+      fontSize: AppFontSize.bodyMedium,
+    );
+  }
+
+  static redBodyMediumTextStyle() {
+    return TextStyle(
+      color: AppColors.red,
+      fontFamily: AppFontFamily.poppins,
+      fontSize: AppFontSize.bodyMedium,
     );
   }
 
