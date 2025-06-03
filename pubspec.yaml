@@ -20,6 +20,7 @@ dependencies:
   # Localization
   flutter_localizations:
     sdk: flutter
+  provider: ^6.1.5
 
 dev_dependencies:
   flutter_test:
