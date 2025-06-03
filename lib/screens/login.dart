@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:task_manager_firebase/model/index.dart';
 
 import 'package:task_manager_firebase/screens/mixin/index.dart';
 import 'package:task_manager_firebase/screens/widgets/index.dart';
@@ -19,6 +20,8 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  final AuthService _auth = AuthService();
 
   bool isObscure = true;
 
@@ -61,7 +64,7 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: AppSpacing.extraSpacing),
-      
+
                   // Email Field
                   AppTextField(
                     controller: _emailController,
@@ -72,7 +75,7 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
                     prefixIcon: Icon(Icons.email_outlined, color: AppColors.blue),
                   ),
                   const SizedBox(height: AppSpacing.largeSpacing),
-      
+
                   // Password Field
                   AppTextField(
                     controller: _passwordController,
@@ -92,16 +95,31 @@ class _LoginPageState extends BaseState<LoginPage> with BasicPage {
                     ),
                   ),
                   const SizedBox(height: AppSpacing.largeSpacing),
-      
+
                   Align(
                     alignment: Alignment.centerRight,
                     child: Text('Forgot Password ?', style: AppStyles.blueBodySmallTextStyle()),
                   ),
                   const SizedBox(height: AppSpacing.largeSpacing),
-      
-                  AppElevatedButton(onPressed: () {}, label: 'Log In'),
+
+                  AppElevatedButton(
+                    onPressed: () async {
+                      String email = _emailController.text.trim();
+                      String password = _passwordController.text.trim();
+
+                      final result = await _auth.signInWithEmailAndPassword(email, password);
+
+                      if (result is UserModel) {
+                        router.replaceNamed('/home');
+                      } else if (result is String) {
+                        AppToast.showError(context, result);
+                      }
+                    },
+                    label: 'Log In',
+                  ),
+
                   const SizedBox(height: AppSpacing.largeSpacing),
-      
+
                   RichText(
                     text: TextSpan(
                       children: [

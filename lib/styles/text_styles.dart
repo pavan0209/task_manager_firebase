@@ -69,7 +69,7 @@ class AppStyles {
 
   static appButtonStyle(BuildContext context, {bool? disabled}) {
     return ElevatedButton.styleFrom(
-      minimumSize: const Size(double.infinity, 45),
+      minimumSize: const Size(double.infinity, 40),
       foregroundColor: AppColors.white,
       backgroundColor: disabled == true ? AppColors.grey.withOpacity(0.4) : AppColors.blue,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(AppRadius.standardRadius))),
